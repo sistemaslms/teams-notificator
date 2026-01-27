@@ -2,6 +2,7 @@
 
 Paquete PHP para enviar notificaciones a Microsoft Teams (Power Automate / webhook).
 
+
 ## Instalación
 
 ```bash
