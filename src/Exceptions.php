@@ -1,6 +1,6 @@
 <?php
 
-namespace TeamsNotificator;
+namespace LmsTeamsNotificator;
 
 class TeamsNotificatorException extends \RuntimeException {}
 class InvalidWebhookUrlException extends TeamsNotificatorException {}

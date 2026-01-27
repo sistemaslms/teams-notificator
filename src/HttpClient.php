@@ -1,6 +1,6 @@
 <?php
 
-namespace TeamsNotificator;
+namespace LmsTeamsNotificator;
 
 final class HttpClient
 {
