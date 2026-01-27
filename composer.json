@@ -1,5 +1,5 @@
 {
-  "name": "iseazy/teams-notificator",
+  "name": "iseazylms/teams-notificator",
   "description": "Paquete PHP para enviar notificaciones a Teams (Power Automate / Webhook).",
   "type": "library",
   "license": "MIT",
