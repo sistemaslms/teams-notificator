@@ -14,11 +14,11 @@ final class LmsTeamsNotificator
     private $message = '';
 
     /**
-     * @param string $webhookUrl
      * @param string $message
+     * @param string $webhookUrl
      * @param HttpClient|null $httpClient
      */
-    public function __construct($webhookUrl, $message = '')
+    public function __construct($message, $webhookUrl)
     {
         $this->httpClient = new HttpClient();
         $this->webhookUrl = $webhookUrl;
