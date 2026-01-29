@@ -16,13 +16,24 @@ final class LmsTeamsNotificator
     /**
      * @param string $message
      * @param string $webhookUrl
-     * @param HttpClient|null $httpClient
      */
     public function __construct($message, $webhookUrl)
     {
         $this->httpClient = new HttpClient();
         $this->webhookUrl = $webhookUrl;
         $this->message = $message . "\n\n";
+    }
+
+    /**
+     * Permite cambiar dinámicamente el webhook de Teams
+     *
+     * @param string $webhookUrl
+     * @return self
+     */
+    public function setTeamsWebHookUrl(string $webhookUrl): self
+    {
+        $this->webhookUrl = $webhookUrl;
+        return $this;
     }
 
     /**
@@ -44,9 +55,9 @@ final class LmsTeamsNotificator
      */
     public function notify()
     {
-        $this->httpClient->postJson($this->webhookUrl, array(
+        $this->httpClient->postJson($this->webhookUrl, [
             'message' => $this->message,
-        ));
+        ]);
     }
 
     /**
