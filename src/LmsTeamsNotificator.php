@@ -55,6 +55,10 @@ final class LmsTeamsNotificator
      */
     public function notify()
     {
+        if (trim($this->message) === '') {
+            return;
+        }
+
         $this->httpClient->postJson($this->webhookUrl, [
             'message' => $this->message,
         ]);
