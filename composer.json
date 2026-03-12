@@ -11,7 +11,8 @@
   "autoload": {
     "psr-4": {
       "LmsTeamsNotificator\\": "src/"
-    }
+    },
+    "classmap": ["src/Exceptions.php"]
   },
   "minimum-stability": "stable",
   "prefer-stable": true
